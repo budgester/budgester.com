@@ -1,0 +1,7 @@
+From clean install of the EC2 instance install
+* nginx
+* configure nginx
+* configure php with nginx
+* Pull website content down from Github
+
+
