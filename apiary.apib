@@ -1,80 +1,600 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: https://qa1.google.co.uk/api
 
-# budgester
+# Flags/{:patient_id}
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+description blah blah blah
 
-## Questions Collection [/questions]
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
 
-### List All Questions [GET]
+### Flags/{:patient_id} Index [GET]
 
-+ Response 200 (application/json)
++ Response 200 application/json
 
         [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
+          {
+            "id": 4,
+            "patient_id": 783,
+            "description": "this patient is a pest",
+            "created_by_id": 631,
+            "updated_by_id": 631,
+            "created_at": "2016-06-14T10:50:10.000+01:00",
+            "updated_at": "2016-06-14T10:50:10.000+01:00",
+            "updated_by_name": "Seymour Butts 631",
+            "created_by_name": "Seymour Butts 631"
+          },
+          {
+            "id": 5,
+            "patient_id": 783,
+            "description": "this patient is a pest",
+            "created_by_id": 632,
+            "updated_by_id": 632,
+            "created_at": "2016-06-14T10:50:10.000+01:00",
+            "updated_at": "2016-06-14T10:50:10.000+01:00",
+            "updated_by_name": "Seymour Butts 632",
+            "created_by_name": "Seymour Butts 632"
+          },
+          {
+            "id": 6,
+            "patient_id": 783,
+            "description": "this patient is a pest",
+            "created_by_id": 633,
+            "updated_by_id": 633,
+            "created_at": "2016-06-14T10:50:10.000+01:00",
+            "updated_at": "2016-06-14T10:50:10.000+01:00",
+            "updated_by_name": "Seymour Butts 633",
+            "created_by_name": "Seymour Butts 633"
+          }
         ]
 
-### Create a New Question [POST]
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+### Flags/{:patient_id} Index [GET]
 
-+ Request (application/json)
++ Response 200 application/json
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+        [
+          {
+            "id": 7,
+            "patient_id": 785,
+            "description": "this patient is a pest",
+            "created_by_id": 639,
+            "updated_by_id": 639,
+            "created_at": "2016-06-14T10:50:11.000+01:00",
+            "updated_at": "2016-06-14T10:50:11.000+01:00",
+            "updated_by_name": "Seymour Butts 639",
+            "created_by_name": "Seymour Butts 639"
+          },
+          {
+            "id": 8,
+            "patient_id": 785,
+            "description": "this patient is a pest",
+            "created_by_id": 640,
+            "updated_by_id": 640,
+            "created_at": "2016-06-14T10:50:11.000+01:00",
+            "updated_at": "2016-06-14T10:50:11.000+01:00",
+            "updated_by_name": "Seymour Butts 640",
+            "created_by_name": "Seymour Butts 640"
+          },
+          {
+            "id": 9,
+            "patient_id": 785,
+            "description": "this patient is a pest",
+            "created_by_id": 641,
+            "updated_by_id": 641,
+            "created_at": "2016-06-14T10:50:11.000+01:00",
+            "updated_at": "2016-06-14T10:50:11.000+01:00",
+            "updated_by_name": "Seymour Butts 641",
+            "created_by_name": "Seymour Butts 641"
+          }
+        ]
 
-+ Response 201 (application/json)
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
 
-    + Headers
+### Flags/{:patient_id} Create [POST]
 
-            Location: /questions/2
++ Request 
 
     + Body
 
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+        {
+          "description": "this is a test"
+        }
+
++ Response 201 application/json
+
+        {
+          "id": 10,
+          "patient_id": 786,
+          "description": "this is a test",
+          "created_by_id": 642,
+          "updated_by_id": 642,
+          "created_at": "2016-06-14T10:50:11.468+01:00",
+          "updated_at": "2016-06-14T10:50:11.468+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 1"
+        }
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Create [POST]
+
++ Request 
+
+    + Body
+
+        {
+          "description": "this is a test"
+        }
+
++ Response 201 application/json
+
+        {
+          "id": 11,
+          "patient_id": 787,
+          "description": "this is a test",
+          "created_by_id": 643,
+          "updated_by_id": 643,
+          "created_at": "2016-06-14T10:50:11.629+01:00",
+          "updated_at": "2016-06-14T10:50:11.629+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 1"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Show [GET]
+
++ Response 200 application/json
+
+        {
+          "id": 12,
+          "patient_id": 788,
+          "description": "This patient is a pest",
+          "created_by_id": 645,
+          "updated_by_id": 645,
+          "created_at": "2016-06-14T10:50:11.000+01:00",
+          "updated_at": "2016-06-14T10:50:11.000+01:00",
+          "updated_by_name": "Seymour Butts 645",
+          "created_by_name": "Seymour Butts 645"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Update [PATCH]
+
++ Request 
+
+    + Body
+
+        {
+          "description": "changed desc"
+        }
+
++ Response 200 application/json
+
+        {
+          "id": 13,
+          "patient_id": 789,
+          "description": "changed desc",
+          "created_by_id": 647,
+          "updated_by_id": 646,
+          "created_at": "2016-06-14T10:50:11.000+01:00",
+          "updated_at": "2016-06-14T10:50:11.941+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 647"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Destroy [DELETE]
+
++ Response 200 application/json
+
+        {
+          "id": 14,
+          "patient_id": 790,
+          "description": "This patient is a pest",
+          "created_by_id": 649,
+          "updated_by_id": 649,
+          "created_at": "2016-06-14T10:50:12.000+01:00",
+          "updated_at": "2016-06-14T10:50:12.097+01:00",
+          "updated_by_name": "Seymour Butts 649",
+          "created_by_name": "Seymour Butts 649"
+        }
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Index [GET]
+
++ Response 200 application/json
+
+        [
+          {
+            "id": 4,
+            "patient_id": 783,
+            "description": "this patient is a pest",
+            "created_by_id": 631,
+            "updated_by_id": 631,
+            "created_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_by_name": "Seymour Butts 631",
+            "created_by_name": "Seymour Butts 631"
+          },
+          {
+            "id": 5,
+            "patient_id": 783,
+            "description": "this patient is a pest",
+            "created_by_id": 632,
+            "updated_by_id": 632,
+            "created_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_by_name": "Seymour Butts 632",
+            "created_by_name": "Seymour Butts 632"
+          },
+          {
+            "id": 6,
+            "patient_id": 783,
+            "description": "this patient is a pest",
+            "created_by_id": 633,
+            "updated_by_id": 633,
+            "created_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_by_name": "Seymour Butts 633",
+            "created_by_name": "Seymour Butts 633"
+          }
+        ]
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Index [GET]
+
++ Response 200 application/json
+
+        [
+          {
+            "id": 7,
+            "patient_id": 785,
+            "description": "this patient is a pest",
+            "created_by_id": 639,
+            "updated_by_id": 639,
+            "created_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_by_name": "Seymour Butts 639",
+            "created_by_name": "Seymour Butts 639"
+          },
+          {
+            "id": 8,
+            "patient_id": 785,
+            "description": "this patient is a pest",
+            "created_by_id": 640,
+            "updated_by_id": 640,
+            "created_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_by_name": "Seymour Butts 640",
+            "created_by_name": "Seymour Butts 640"
+          },
+          {
+            "id": 9,
+            "patient_id": 785,
+            "description": "this patient is a pest",
+            "created_by_id": 641,
+            "updated_by_id": 641,
+            "created_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_at": "2016-06-14T11:01:29.000+01:00",
+            "updated_by_name": "Seymour Butts 641",
+            "created_by_name": "Seymour Butts 641"
+          }
+        ]
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Create [POST]
+
++ Request 
+
+    + Body
+
+        {
+          "description": "this is a test"
+        }
+
++ Response 201 application/json
+
+        {
+          "id": 10,
+          "patient_id": 786,
+          "description": "this is a test",
+          "created_by_id": 642,
+          "updated_by_id": 642,
+          "created_at": "2016-06-14T11:01:30.187+01:00",
+          "updated_at": "2016-06-14T11:01:30.187+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 1"
+        }
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Create [POST]
+
++ Request 
+
+    + Body
+
+        {
+          "description": "this is a test"
+        }
+
++ Response 201 application/json
+
+        {
+          "id": 11,
+          "patient_id": 787,
+          "description": "this is a test",
+          "created_by_id": 643,
+          "updated_by_id": 643,
+          "created_at": "2016-06-14T11:01:30.336+01:00",
+          "updated_at": "2016-06-14T11:01:30.336+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 1"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Show [GET]
+
++ Response 200 application/json
+
+        {
+          "id": 12,
+          "patient_id": 788,
+          "description": "This patient is a pest",
+          "created_by_id": 645,
+          "updated_by_id": 645,
+          "created_at": "2016-06-14T11:01:30.000+01:00",
+          "updated_at": "2016-06-14T11:01:30.000+01:00",
+          "updated_by_name": "Seymour Butts 645",
+          "created_by_name": "Seymour Butts 645"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Update [PATCH]
+
++ Request 
+
+    + Body
+
+        {
+          "description": "changed desc"
+        }
+
++ Response 200 application/json
+
+        {
+          "id": 13,
+          "patient_id": 789,
+          "description": "changed desc",
+          "created_by_id": 647,
+          "updated_by_id": 646,
+          "created_at": "2016-06-14T11:01:30.000+01:00",
+          "updated_at": "2016-06-14T11:01:30.659+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 647"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Destroy [DELETE]
+
++ Response 200 application/json
+
+        {
+          "id": 14,
+          "patient_id": 790,
+          "description": "This patient is a pest",
+          "created_by_id": 649,
+          "updated_by_id": 649,
+          "created_at": "2016-06-14T11:01:30.000+01:00",
+          "updated_at": "2016-06-14T11:01:30.819+01:00",
+          "updated_by_name": "Seymour Butts 649",
+          "created_by_name": "Seymour Butts 649"
+        }
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Index [GET]
+
++ Response 200 application/json
+
+        [
+          {
+            "id": 4,
+            "patient_id": 820,
+            "description": "this patient is a pest",
+            "created_by_id": 650,
+            "updated_by_id": 650,
+            "created_at": "2016-06-16T10:27:19.000+01:00",
+            "updated_at": "2016-06-16T10:27:19.000+01:00",
+            "updated_by_name": "Seymour Butts 650",
+            "created_by_name": "Seymour Butts 650"
+          },
+          {
+            "id": 5,
+            "patient_id": 820,
+            "description": "this patient is a pest",
+            "created_by_id": 651,
+            "updated_by_id": 651,
+            "created_at": "2016-06-16T10:27:19.000+01:00",
+            "updated_at": "2016-06-16T10:27:19.000+01:00",
+            "updated_by_name": "Seymour Butts 651",
+            "created_by_name": "Seymour Butts 651"
+          },
+          {
+            "id": 6,
+            "patient_id": 820,
+            "description": "this patient is a pest",
+            "created_by_id": 652,
+            "updated_by_id": 652,
+            "created_at": "2016-06-16T10:27:19.000+01:00",
+            "updated_at": "2016-06-16T10:27:19.000+01:00",
+            "updated_by_name": "Seymour Butts 652",
+            "created_by_name": "Seymour Butts 652"
+          }
+        ]
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Index [GET]
+
++ Response 200 application/json
+
+        [
+          {
+            "id": 7,
+            "patient_id": 822,
+            "description": "this patient is a pest",
+            "created_by_id": 658,
+            "updated_by_id": 658,
+            "created_at": "2016-06-16T10:27:20.000+01:00",
+            "updated_at": "2016-06-16T10:27:20.000+01:00",
+            "updated_by_name": "Seymour Butts 658",
+            "created_by_name": "Seymour Butts 658"
+          },
+          {
+            "id": 8,
+            "patient_id": 822,
+            "description": "this patient is a pest",
+            "created_by_id": 659,
+            "updated_by_id": 659,
+            "created_at": "2016-06-16T10:27:20.000+01:00",
+            "updated_at": "2016-06-16T10:27:20.000+01:00",
+            "updated_by_name": "Seymour Butts 659",
+            "created_by_name": "Seymour Butts 659"
+          },
+          {
+            "id": 9,
+            "patient_id": 822,
+            "description": "this patient is a pest",
+            "created_by_id": 660,
+            "updated_by_id": 660,
+            "created_at": "2016-06-16T10:27:20.000+01:00",
+            "updated_at": "2016-06-16T10:27:20.000+01:00",
+            "updated_by_name": "Seymour Butts 660",
+            "created_by_name": "Seymour Butts 660"
+          }
+        ]
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Create [POST]
+
++ Request 
+
+    + Body
+
+        {
+          "description": "this is a test"
+        }
+
++ Response 201 application/json
+
+        {
+          "id": 10,
+          "patient_id": 823,
+          "description": "this is a test",
+          "created_by_id": 661,
+          "updated_by_id": 661,
+          "created_at": "2016-06-16T10:27:20.669+01:00",
+          "updated_at": "2016-06-16T10:27:20.669+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 1"
+        }
+
+## Flags/{:patient_id} collection [/flags/{:patient_id}]
+
+### Flags/{:patient_id} Create [POST]
+
++ Request 
+
+    + Body
+
+        {
+          "description": "this is a test"
+        }
+
++ Response 201 application/json
+
+        {
+          "id": 11,
+          "patient_id": 824,
+          "description": "this is a test",
+          "created_by_id": 662,
+          "updated_by_id": 662,
+          "created_at": "2016-06-16T10:27:20.833+01:00",
+          "updated_at": "2016-06-16T10:27:20.833+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 1"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Show [GET]
+
++ Response 200 application/json
+
+        {
+          "id": 12,
+          "patient_id": 825,
+          "description": "This patient is a pest",
+          "created_by_id": 664,
+          "updated_by_id": 664,
+          "created_at": "2016-06-16T10:27:21.000+01:00",
+          "updated_at": "2016-06-16T10:27:21.000+01:00",
+          "updated_by_name": "Seymour Butts 664",
+          "created_by_name": "Seymour Butts 664"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Update [PATCH]
+
++ Request 
+
+    + Body
+
+        {
+          "description": "changed desc"
+        }
+
++ Response 200 application/json
+
+        {
+          "id": 13,
+          "patient_id": 826,
+          "description": "changed desc",
+          "created_by_id": 666,
+          "updated_by_id": 665,
+          "created_at": "2016-06-16T10:27:21.000+01:00",
+          "updated_at": "2016-06-16T10:27:21.285+01:00",
+          "updated_by_name": "Seymour Butts 1",
+          "created_by_name": "Seymour Butts 666"
+        }
+
+## Flags/{:id} collection [/flags/{:id}]
+
+### Flags/{:id} Destroy [DELETE]
+
++ Response 200 application/json
+
+        {
+          "id": 14,
+          "patient_id": 827,
+          "description": "This patient is a pest",
+          "created_by_id": 668,
+          "updated_by_id": 668,
+          "created_at": "2016-06-16T10:27:21.000+01:00",
+          "updated_at": "2016-06-16T10:27:21.465+01:00",
+          "updated_by_name": "Seymour Butts 668",
+          "created_by_name": "Seymour Butts 668"
+        }
